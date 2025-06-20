@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Gustavo Lira</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('Imagens/laranja.png.jpeg') no-repeat center center/cover;
+  filter: blur(6px);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(27, 27, 27, 0.5);
+  z-index: -1;
+}
+
+
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #4da6ff;
+    }
+
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4da6ff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.portfolio img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 50px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #4da6ff;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #3399ff;
+    }
+
+    .fab {
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+
+    a {
+      color: #4da6ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #88caff;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #ccc;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gustavo Lira - Designer Gráfico</h1>
+    <p>Transformando ideias em arte visual</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou designer gráfico com experiência em criação de identidade visual, social media, logotipos e artes digitais. Apaixonado por transformar ideias em imagens impactantes.</p>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfólio</h2>
+    <p>Aqui estão alguns dos meus trabalhos:</p>
+    <img src="Imagens/caveira-ilustrator.png.png" alt="Caveira Illustrator 1" />
+    <img src="Imagens/write this down.png.png" alt="Write this down" />
+    <img src="Imagens/cabana.png" alt="Mini mundos, grandes ideias." />
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <ul>
+      <li>Criação de logotipo</li>
+      <li>Identidade visual</li>
+      <li>Posts para redes sociais</li>
+      <li>Cartões de visita e material impresso</li>
+      <li>Artes para stories e destaques</li>
+      <li>Banners digitais e Google Ads</li>
+      <li>Embalagens e rótulos</li>
+      <li>Apresentações profissionais (Pitch, PowerPoint, etc.)</li>
+      <li>Layouts para site e landing pages</li>
+      <li>Mockups realistas de marca e produtos</li>
+      <li>Edições e diagramação de e-books, catálogos e PDFs</li>
+      <li>Manual de identidade visual</li>
+      <li>Thumbnails para YouTube</li>
+      <li>Consultoria visual para marcas iniciantes</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato pelo WhatsApp ou redes sociais:</p>
+
+    <p>
+      <a href="https://wa.me/5511951165964" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </p>
+    <p>
+      <a href="https://www.instagram.com/roug.hlines/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> @gustavolirao
+      </a>
+    </p>
+    <p>
+      <a href="https://behance.net/gustavolirao" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-behance"></i> behance.net/gustavolirao
+      </a>
+    </p>
+    <p>Email: <strong>gliraoliveira3@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gustavo Lira. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
