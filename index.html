@@ -15,23 +15,31 @@
       scroll-behavior: smooth;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      position: relative;
+    }
+
     body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: url('Imagens/laranja.png.jpeg') no-repeat center center/cover;
-  filter: blur(6px);
-  z-index: -2;
-}
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('Imagens/laranja.png.jpeg') no-repeat center center/cover;
+      filter: blur(6px);
+      z-index: -2;
+    }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(27, 27, 27, 0.5);
-  z-index: -1;
-}
-
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
 
     header {
       background: #1f1f1f;
@@ -49,7 +57,7 @@ body::after {
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 10px 0;
+      padding: 10px;
       flex-wrap: wrap;
     }
 
@@ -66,79 +74,118 @@ body::after {
 
     section {
       padding: 60px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.portfolio img {
-  width: 100%;
-  max-width: 220px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #000;
-}
-
-    footer {
-      background: #1f1f1f;
-      text-align: center;
-      padding: 20px;
-      color: #aaa;
-      margin-top: 50px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #4da6ff;
-      color: #000;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #3399ff;
-    }
-
-    .fab {
-      font-size: 1.2em;
-      margin-right: 8px;
-    }
-
-    a {
+    h2 {
       color: #4da6ff;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      margin-bottom: 20px;
     }
 
-    a:hover {
-      color: #88caff;
+    #sobre p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .portfolio-item img,
+    .portfolio-item video {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      margin-bottom: 10px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Ajuste específico para Nutry */
+    .nutry-item img {
+      max-width: 180px;
+      margin: 0 auto 12px auto;
+      display: block;
+      height: auto;
+    }
+
+    .software {
+      font-size: 0.95em;
+      color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .software-icon {
+      width: 20px;
+      height: auto;
+      max-height: 20px;
+      object-fit: contain;
+    }
+
+    /* Ícone do Photoshop menor no Nutry */
+    .nutry-item .software-icon {
+      width: 16px;
+      max-height: 16px;
     }
 
     ul {
       list-style-type: disc;
-      margin-left: 20px;
+      padding-left: 20px;
       color: #ccc;
     }
 
     ul li {
       margin-bottom: 8px;
-      
+    }
+
+    #contato p, #contato a {
+      font-size: 1em;
+      color: #ddd;
+    }
+
+    #contato a {
+      display: inline-block;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    #contato i {
+      margin-right: 5px;
+      color: #4da6ff;
+    }
+
+    footer {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+    }
+
+    p {
+      margin: 10px 0;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>Gustavo Lira - Designer Gráfico</h1>
-    <p>Transformando ideias em arte visual</p>
+    <p>Transformando ideias em experiências visuais</p>
   </header>
 
   <nav>
@@ -150,63 +197,112 @@ body::after {
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou designer gráfico com experiência em criação de identidade visual, social media, logotipos e artes digitais. Apaixonado por transformar ideias em imagens impactantes.</p>
+    <p>
+      Olá! Me chamo <strong>Gustavo Lira</strong>, designer gráfico com forte atuação em criação visual, ilustração digital, artes 3D e identidades marcantes.<br><br>
+      Tenho experiência prática com ferramentas como <strong>Adobe Illustrator</strong>, <strong>Photoshop</strong>, <strong>Unreal Engine</strong> e <strong>Premiere Pro</strong>, que me permitem transformar ideias em peças impactantes, estéticas e funcionais.<br><br>
+      Cada projeto é uma oportunidade de expressar criatividade com propósito.
+    </p>
   </section>
 
-  <section id="portfolio" class="portfolio">
+  <section id="portfolio">
     <h2>Portfólio</h2>
-    <p>Aqui estão alguns dos meus trabalhos:</p>
-    <img src="Imagens/caveira-ilustrator.png.png" alt="Caveira Illustrator 1" />
-    <img src="Imagens/write this down.png.png" alt="Write this down" />
-    <img src="Imagens/cabana.png" alt="Mini mundos, grandes ideias." />
-    <img src="Imagens/NIke Dunk.png" alt="Dunk." />
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <img src="Imagens/caveira-ilustrator.png.png" alt="Caveira - Illustrator" />
+        <div class="software">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="software-icon" alt="Illustrator" />
+          Adobe Illustrator
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="Imagens/write this down.png.png" alt="Write this down - Illustrator" />
+        <div class="software">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="software-icon" alt="Illustrator" />
+          Adobe Illustrator
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="Imagens/cabana.png" alt="Cabana - Photoshop" />
+        <div class="software">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="software-icon" alt="Photoshop" />
+          Adobe Photoshop
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="Imagens/NIke Dunk.png" alt="Nike Dunk - Photoshop" />
+        <div class="software">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="software-icon" alt="Photoshop" />
+          Adobe Photoshop
+        </div>
+      </div>
+
+      <div class="portfolio-item nutry-item">
+        <img src="Imagens/Nutry.png" alt="Nutry - Photoshop" />
+        <div class="software">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="software-icon" alt="Photoshop" />
+          Adobe Photoshop
+        </div>
+      </div>
+
+      <!-- Vídeo 1 - Unreal -->
+      <div class="portfolio-item">
+        <video controls poster="Imagens/thumb-unreal.jpg">
+          <source src="Imagens/Unreal Project ‐ Feito com o Clipchamp.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos.
+        </video>
+        <p>Projeto criado inteiramente na Unreal Engine, com gravação de tela.</p>
+        <div class="software">
+          <img src="https://img.icons8.com/color/48/000000/unreal-engine.png" class="software-icon" alt="Unreal Engine" />
+          Unreal Engine
+        </div>
+      </div>
+
+      <!-- Vídeo 2 - Unreal + Premiere -->
+      <div class="portfolio-item">
+        <video controls poster="Imagens/thumb-premiere.jpg">
+          <source src="Imagens/Sequence.0000.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos.
+        </video>
+        <p>Projeto feito na Unreal Engine e finalizado no Adobe Premiere Pro.</p>
+        <div class="software">
+          <img src="https://img.icons8.com/color/48/000000/unreal-engine.png" class="software-icon" alt="Unreal Engine" />
+          Unreal Engine
+          <img src="https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" class="software-icon" alt="Premiere Pro" />
+          Adobe Premiere Pro
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section id="servicos">
     <h2>Serviços</h2>
     <ul>
-      <li>Criação de logotipo</li>
-      <li>Identidade visual</li>
+      <li>Criação de logotipo e identidade visual</li>
       <li>Posts para redes sociais</li>
-      <li>Cartões de visita e material impresso</li>
-      <li>Artes para stories e destaques</li>
-      <li>Banners digitais e Google Ads</li>
-      <li>Embalagens e rótulos</li>
-      <li>Apresentações profissionais (Pitch, PowerPoint, etc.)</li>
-      <li>Layouts para site e landing pages</li>
+      <li>Cartões de visita e material gráfico</li>
+      <li>Banners digitais e layouts para sites</li>
+      <li>Rótulos e embalagens</li>
       <li>Mockups realistas de marca e produtos</li>
-      <li>Edições e diagramação de e-books, catálogos e PDFs</li>
-      <li>Manual de identidade visual</li>
+      <li>Apresentações profissionais</li>
       <li>Thumbnails para YouTube</li>
-      <li>Consultoria visual para marcas iniciantes</li>
     </ul>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Entre em contato pelo WhatsApp ou redes sociais:</p>
-
-    <p>
-      <a href="https://wa.me/5511951165964" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-    </p>
-    <p>
-      <a href="https://www.instagram.com/roug.hlines/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> @gustavolirao
-      </a>
-    </p>
-    <p>
-      <a href="https://behance.net/gustavolirao" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-behance"></i> behance.net/gustavolirao
-      </a>
-    </p>
-    <p>Email: <strong>gliraoliveira3@gmail.com</strong></p>
+    <p><a href="https://wa.me/5511951165964"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+    <p><a href="https://instagram.com/roug.hlines"><i class="fab fa-instagram"></i> @gustavolirao</a></p>
+    <p><a href="https://behance.net/gustavolirao"><i class="fab fa-behance"></i> behance.net/gustavolirao</a></p>
+    <p><i class="fas fa-envelope"></i> gliraoliveira3@gmail.com</p>
   </section>
 
   <footer>
     <p>© 2025 Gustavo Lira. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
